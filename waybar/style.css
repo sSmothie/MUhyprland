@@ -1,0 +1,247 @@
+/*@import url("/home/kaloyanbalinov/.cache/wal/colors.css"); */
+/*@import url("/home/kaloyanbalinov/.cache/wal/colors-waybar.css");*/
+@import "colors.css";
+
+* {
+    border-radius: 0;
+    /*font-family: 'DM Mono';*/
+    font-family: 'Product Sans';
+    font-size: 12pt;
+    min-height: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+tooltip {
+	background-color:  @background;
+	border-radius: 50px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: @source_color;
+	color: @background;
+	}
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /* background-color: #1e1e2e; */
+  /* background-color: #181825; */
+  background-color: @background;
+  
+}
+
+window#waybar.hidden {
+  opacity: 0;
+}
+
+#workspaces {
+  margin: 2px 1px 3px 1px;
+  padding: 1px 3px;
+  margin: 5px 5px;
+  margin-right: 2px;
+  border-radius: 36px;
+  margin-top:5px;
+  margin-bottom:5px;
+  border: 5px;
+  font-style: normal;
+  opacity: 1;
+  font-size: 6px;
+  background-color: @primary;
+}
+
+#workspaces button {
+  padding: 1px 4px 1px 4px;
+  margin: 3px 2px 3px 2px;
+  border-radius: 36px;
+  border: 0px;
+  min-width:16px;
+  color: @background;
+  /*background-color: #1e1e1e;*/
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.25s ease-out;
+  /*transition: all 0.9s cubic-bezier(0.05, 0.9, 0.1, 1.00);*/
+  opacity: 1;
+}
+
+#workspaces button.active {
+  color: @primary;
+  background: @on_secondary_fixed;
+  border-radius: 15px;
+  min-width: 58px;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+#workspaces button.urgent {
+  background-color: @on_red;
+  color:@background;
+}
+
+
+#clock, #battery, #mpd  {
+	padding: 1px 3px;
+    color: @background;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#network, #bluetooth, #pulseaudio {
+background: @primary
+}
+
+#network {
+    padding-left: 15px;
+    padding-right: 10px;
+    color: @background;
+    border-radius: 26px 0px 0px 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#language {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: @primary;
+    color: @background;
+    border-radius: 26px 26px 26px 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px
+}
+
+#bluetooth {
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    color: @background;
+    border-radius: 0px 0px 0px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: @surface_container;
+    border-radius: 26px 26px 26px 26px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    color: @primary;
+}
+
+#clock {
+    padding-right: 20px;
+    background: @primary;
+    padding-left: 20px;
+    color: @background;
+    margin-right: 0px;
+    margin-left: 5px;
+    border-radius: 26px 26px 26px 26px;
+}
+
+#custom-player {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: @primary;
+    color: @background;
+    border-radius: 26px 26px 26px 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#window {
+    background: @primary;
+    color: @background;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 26px 26px 26px 26px;
+}
+
+window#window.empty{
+background: @background;
+}
+
+#mpris {
+    background: @primary;
+    color: @background;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#custom-apps {
+    padding-left: 1px;
+    padding-right: 1px;
+    background: @primary; /*@source_color;*/
+    color: @background;
+    border-radius: 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+#custom-power {
+    padding-left: 1px;
+    padding-top: 2px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    background: @primary; /*@source_color;*/
+    color: @background;
+    border-radius: 26px 26px 26px 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+#pulseaudio {
+    padding-right: 20px;
+    padding-left: 3px;
+    padding-bottom: 0px;
+    padding-top: 1px;
+    color: @background;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 0px;
+    border-radius: 0px 26px 26px 0px;
+}
+
+#custom-musnoti {
+    padding-left: 9px;
+    padding-right: 13px;
+    background: @primary;
+    color: @background;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+#calendar {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: @primary;
+    color: @background;
+    border-radius: 26px 26px 26px 26px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px
+}

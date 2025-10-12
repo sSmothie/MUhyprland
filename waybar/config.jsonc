@@ -1,0 +1,164 @@
+{
+  "position": "top",
+  "output": ["DP-1"],
+  "modules-left": ["custom/apps", "clock", "hyprland/workspaces", "custom/musnoti", "tray"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [ "hyprland/language", "network", "bluetooth", "pulseaudio", "battery", "custom/power"],
+  
+  
+  // Modules configuration
+  
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "active-only": false,
+    "all-outputs": true,
+    "on-scroll-up":"hyprctl dispatch workspace -1",
+    "on-scroll-down":"hyprctl dispatch workspace +1",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    },
+  },
+    
+  "clock": {
+    "format": "<span></span>{:%H:%M}",
+    "tooltip-format": "It's the time innit?",
+     "on-click": "gnome-clocks",
+  },
+  
+  
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
+    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
+  
+  
+  "network": {
+    "on-click": "nmgui",
+    "format-wifi": "<span size='12500' >󰤥</span>",
+    "format-ethernet": "<span size='12500'>󰈀</span>",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='12500'>󰤮</span>",
+    "format-disabled": "<span size='12500'>󰤮</span>",
+    "tooltip-format-wifi": "{essid}"
+  },
+  
+  
+  "hyprland/window": {  
+"format": "<span font='9' rise='-4444'>{}</span>", 
+"format-empty": "<span> </span>",
+"tooltip": false,
+"empty": false,
+},
+
+
+  "pulseaudio": {
+    "on-click": "pwvucontrol",
+    "format": "<span size='13000'>{icon}</span>",
+    "format-muted": "<span size='13000'>󰖁</span>",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["󰖀", "󰕾"]
+    }
+  },
+   "hyprland/language": {
+	"format": "<span font='11' rise='-4444'>{}</span>",
+	"format-bg": "bg",
+	"format-en": "en",
+}, 
+  "bluetooth": {
+   
+    "format": "<span size='13000' >󰂯</span>",
+    "tooltip": true,
+	  "tooltip-format": "Bluetooth",
+    "on-click": "overskride",
+   },
+   
+  "tray": {
+	"icon-size": 16,
+	"spacing": 10,
+	"color": "#000000"
+},
+
+  "custom/apps": {
+    "format": "  ",
+    "icon-size": 24,
+    "tooltip": true,
+	  "tooltip-format": "App Launcher",
+    "on-click": "rofi -show drun",
+   },
+   
+    "custom/player": {
+    "exec": "~/.config/hypr/scripts/waybar_now_playing",
+    "format": "<span font='10' rise='-4444'>󰝚{}</span>",
+    "interval": 2,
+    "return-type": "json",
+    "on-double-click": "playerctl previous",
+    "on-click-middle": "g4music",
+    "on-double-click-right": "playerctl next",
+  },
+  
+  "wlr/taskbar": {
+        	"format": "{icon}",
+        	"tooltip": true,
+        	"tooltip-format": "{title}",
+        	"on-click": "activate",
+        	"on-click-middle": "close",
+        	"active-first": true,
+        	"icon-name": ""
+   	 },
+   	 
+   "custom/power": {
+    "format": " ⏻ ",
+    "tooltip": true,
+	  "tooltip-format": "Power",
+    "on-click": "exec ~/.config/rofi/powermenu/type-2/powermenu.sh",
+   },
+   
+    "custom/musnoti": {
+    "format": "<span size='11000'>󰝚</span>",
+    "interval": 2,
+    "return-type": "json",
+    "exec": "~/.config/hypr/scripts/waybar_now_playing",
+    "tooltip": true,
+	  "tooltip-format": "{}",
+    "on-double-click": "playerctl previous",
+    "on-click-middle": "g4music",
+    "on-double-click-right": "playerctl next",
+  },
+  
+    "calendar": {
+    "format": "{%d.%m}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+     "on-click": "gnome-calendar",
+  },
+  
+   "reload_style_on_change":true
+}
+
+   
