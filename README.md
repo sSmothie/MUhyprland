@@ -25,3 +25,37 @@ SHORTCUTS:
 - Super + ALT + P = restart pipewire (for when it shits the bed)
 - Super + R = rofi emoji
 - Super + Space = rofi apps
++ a lot more, but these are the main ones
+
+ALSO, I DONT GUARANTEE IT WORKING ON YOUR SYSTEM, I AM NOT A TECH WIZARD AND I WILL NOT FIX IT. (i.e. if you want something figure it out yourself dumbnuts)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ok that's enough, I love you *mwah* 💋
