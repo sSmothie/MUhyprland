@@ -73,7 +73,7 @@
 
 
   "pulseaudio": {
-    "on-click": "pwvucontrol",
+    "on-click": "pavucontrol",
     "format": "<span size='13000'>{icon}</span>",
     "format-muted": "<span size='13000'>󰖁</span>",
     "format-icons": {
