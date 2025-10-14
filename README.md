@@ -15,6 +15,7 @@ REQUIREMENTS:
 - Waypaper (for switching wallpapers and automatically changing the colour scheme)
 - Matugen (for generating said colour scheme)
 - kitty
+- pwvucontrol (not pavucontrol, those are different programs)
 
 SHORTCUTS:
 - Super + Enter = terminal
