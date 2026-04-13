@@ -2,7 +2,7 @@
 
 MU (for Material Unity) are my (originaly plagiarized, but heavily modified) hyprland dotfiles. It tries to mimic google's Material 3 Expressive principles, while still sort of looking like your stock android UI. It uses matugen for generating the colour palettes.
 
-
+[![Watch the video](https://raw.githubusercontent.com/sSmothie/MUhyprland/main/assets/thumbnail.jpg)](https://raw.githubusercontent.com/sSmothie/MUhyprland/main/assets/dostshowcasevid.mp4)
 
 **REQUIREMENTS:**
 - most likely any of the fonts supporting the NERD icons for displaying, well, icons.
