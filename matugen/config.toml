@@ -5,12 +5,12 @@ version_check = false
 
 [config.wallpaper]
 # The base command to run for applying the wallpaper, shouldn't have spaces in it.
-command = "swww"
+command = "awww img  {{image}}"
 
 # The arguments that will be provided to the command.
 # Keywords like {{ mode }} or anything that works inside of hooks doesn't work here.
 # The last argument will be the image path.
-arguments = ["img", "--transition-type", "center"]
+#arguments = ["img", "--transition-type", "strech"]
 
 # For example, killing the wallpaper daemon. Usage is like a normal hook.
 # pre_hook = ""
@@ -30,6 +30,11 @@ command = "exec ~/apply_kvantum.sh"
 input_path = './templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+#
+[templates.wine]
+input_path = './templates/wine.reg'
+output_path = '/tmp/wine.reg'
+post_hook = 'wine regedit /tmp/wine.reg'
 # This will use a different input path depending on what mode you use.
 # input_path_modes = { dark = "./colors.whatever-extension", light = "./colors.whatever-extension" }
 [templates.hyprland]
@@ -37,14 +42,10 @@ input_path = './templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors/colors.conf'
 post_hook = 'hyprctl reload'
 #
-#
-[templates.kitty]
-input_path = './templates/kitty-colors.conf'
-output_path = '~/.config/kitty/colors.conf'
-#
 [templates.gtk3]
 input_path = './templates/gtk-colors.css'
 output_path = '~/.config/gtk-3.0/gtk.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 #
 [templates.gtk4]
 input_path = './templates/gtk-colors.css'
@@ -66,14 +67,43 @@ output_path = '~/.config/qt5ct/colors/matugen.conf'
 input_path = './templates/qtct-colors.conf'
 output_path = '~/.config/qt6ct/colors/matugen.conf'
 #
+[templates.kvantum_kvconfig]
+input_path = './templates/kvantum-colors.kvconfig'
+output_path = '~/.config/Kvantum/matugen/matugen.kvconfig'
+#
+[templates.kvantum_svg]
+input_path = './templates/kvantum-colors.svg'
+output_path = '~/.config/Kvantum/matugen/matugen.svg'
+#
 [templates.discord]
 input_path = './templates/midnight-discord.css'
 output_path = '~/.config/Vencord/themes/midnight-matugen-discord.css'
-
-
+#
 [templates.dunst]
 input_path = './templates/dunstrc-colors'
 output_path = '~/.config/dunst/dunstrc.conf'
+#
+[templates.swaync]
+input_path = './templates/colors.css'
+output_path = '~/.config/swaync/colors.css'
+#
+[templates.obs]
+input_path = './templates/matugen.obt'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
+#
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+#
+[templates.firefox-website-colors]
+input_path = "./templates/firefox-colors.css"
+output_path = "~/.librewolf/6bryfkk1.default-release/colors.css"
+#
+[templates.btop]
+input_path = './templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
 # This will compare all of the colors inside the array with the color you set as `compare_to`, and returns the closest color to it.
 # You can then use `{{closest_color}}` inside templates and hooks.
 colors_to_compare = [
@@ -96,7 +126,6 @@ compare_to = "{{colors.primary.default.hex}}"
 # Runs before the template is exported. You can use keywords here,
 pre_hook = 'echo "source color {{colors.source_color.default.hex}}, source image {{image}}, closest color {{closest_color}}"'
 # Runs after the template is exported. You can use keywords here.
-post_hook = 'exec ~/apply_kvantum.sh'
 # Only hex values
 # https://m3.material.io/styles/color/advanced/adjust-existing-colors#1cc12e43-237b-45b9-8fe0-9a3549c1f61e
 # Blend is set to true by default. 

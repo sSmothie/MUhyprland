@@ -16,13 +16,13 @@
 
 body {
     /* font options */
-    --font: 'Adwaita Sans Medium 11'; /* change to '' for default discord font */
+    --font: 'DM Sans'; /* change to '' for default discord font */
     --code-font: ''; /* change to '' for default discord font */
-    font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
+    font-weight: 450; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 
     /* sizes */
-    --gap: 12px; /* spacing between panels */
-    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+    --gap: 15px; /* spacing between panels */
+    --divider-thickness: 5px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
     /* animation/transition options */
