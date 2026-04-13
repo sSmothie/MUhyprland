@@ -1,7 +1,7 @@
 {
   "position": "top",
-  //"output": ["DP-1"],
-  "modules-left": ["custom/apps", "clock", "hyprland/workspaces", "custom/musnoti", "tray"],
+  "output": ["DP-1", "HDMI-A-1"],
+  "modules-left": ["custom/apps","clock", "hyprland/workspaces","custom/musnoti", "tray"],
   "modules-center": ["hyprland/window"],
   "modules-right": [ "hyprland/language", "network", "bluetooth", "pulseaudio", "battery", "custom/power"],
   
@@ -10,28 +10,17 @@
   
   
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "",
     "active-only": false,
     "all-outputs": true,
-    "on-scroll-up":"hyprctl dispatch workspace -1",
-    "on-scroll-down":"hyprctl dispatch workspace +1",
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    },
+    "on-scroll-up":"hyprctl dispatch workspace +1",
+    "on-scroll-down":"hyprctl dispatch workspace -1",
+
   },
     
   "clock": {
     "format": "<span></span>{:%H:%M}",
-    "tooltip-format": "It's the time innit?",
+    "tooltip-format": "{:%H:%M}" ,
      "on-click": "gnome-clocks",
   },
   
@@ -54,13 +43,14 @@
   
   
   "network": {
-    "on-click": "nmgui",
+    "on-click": "swaync-client -t -sw",
     "format-wifi": "<span size='12500' >󰤥</span>",
     "format-ethernet": "<span size='12500'>󰈀</span>",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='12500'>󰤮</span>",
     "format-disabled": "<span size='12500'>󰤮</span>",
-    "tooltip-format-wifi": "{essid}"
+    "tooltip-format-wifi": "{essid}",
+    "tooltip-format-ethernet": "Ethernet"
   },
   
   
@@ -96,7 +86,7 @@
     "format": "<span size='13000' >󰂯</span>",
     "tooltip": true,
 	  "tooltip-format": "Bluetooth",
-    "on-click": "overskride",
+    "on-click": "swaync-client -t -sw",
    },
    
   "tray": {
@@ -148,7 +138,7 @@
     "tooltip": true,
 	  "tooltip-format": "{}",
     "on-double-click": "playerctl previous",
-    "on-click-middle": "g4music",
+    "on-click-middle": "flatpak run com.unicornsonlsd.finamp",
     "on-double-click-right": "playerctl next",
   },
   
