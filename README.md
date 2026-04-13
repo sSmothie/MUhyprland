@@ -1,10 +1,10 @@
 # MUhyprland
 
-MU (for Material Unity) are my (originaly plagiarized, but heavily modified) hyprland dotfiles. It tries to mimic google's material design 3 principles, while still sort of looking like your stock android UI. It uses matugen for generating colour palettes
+MU (for Material Unity) are my (originaly plagiarized, but heavily modified) hyprland dotfiles. It tries to mimic google's Material 3 Expressive principles, while still sort of looking like your stock android UI. It uses matugen for generating the colour palettes.
 
 
 
-REQUIREMENTS:
+**REQUIREMENTS:**
 - most likely any of the fonts supporting the NERD icons for displaying, well, icons.
 - Product Sans font installed, unless you want something else
 - (if you want you can download the hypr_dynamic_cursors, since i have a small config made: https://github.com/VirtCode/hypr-dynamic-cursors)
@@ -17,7 +17,7 @@ REQUIREMENTS:
 - kitty
 - pwvucontrol (not pavucontrol, those are different programs)
 
-SHORTCUTS:
+**SHORTCUTS:** (mostly)
 - Super + Enter = terminal
 - Super + B = browser
 - Super + E = File manager
@@ -31,6 +31,59 @@ SHORTCUTS:
 + a lot more, but these are the main ones
 
 ALSO, I DONT GUARANTEE IT WORKING ON YOUR SYSTEM, I AM NOT A TECH WIZARD AND I WILL NOT FIX IT. (i.e. if you want something figure it out yourself dumbnuts)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
